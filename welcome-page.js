@@ -73,7 +73,7 @@ tabs[0] = tabris.create("Tab", {
 }).appendTo(tabFolder);
 List.decorate(tabs[0], items[0], function(item) {
     action.dispose();
-    require('./profilePage').open();
+    require('./profile-page').open();
 });
 
 tabs[1] = tabris.create("Tab", {
@@ -81,7 +81,7 @@ tabs[1] = tabris.create("Tab", {
 }).appendTo(tabFolder);
 List.decorate(tabs[1], items[1], function(item) {
     action.dispose();
-    require('./profilePage').open();
+    require('./profile-page').open();
 });
 
 tabs[2] = tabris.create("Tab", {
@@ -89,7 +89,7 @@ tabs[2] = tabris.create("Tab", {
 }).appendTo(tabFolder);
 List.decorate(tabs[2], items[2], function(item) {
     action.dispose();
-    require('./profilePage').open();
+    require('./profile-page').open();
 });
 
 var action = tabris.create("SearchAction", {

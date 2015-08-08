@@ -1,3 +1,3 @@
 console.log('start mink');
-require('./homepage').open();
+require('./home-page').open();
 

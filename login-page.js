@@ -28,7 +28,7 @@ tabris.create('Button', {
   id: 'done',
   text: 'Entrer'
 }).on('select', function() {
-  require('./welcomePage').open();
+  require('./welcome-page').open();
 }).appendTo(page);
 
 page.apply({

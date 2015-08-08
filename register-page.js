@@ -7,7 +7,7 @@ tabris.create('Button', {
   id: 'done',
   text: 'Créer mon compte'
 }).on('select', function() {
-  require('./profilePage').open();
+  require('./profile-page').open();
 }).appendTo(page);
 
 page.apply(BasicProfile.getStyle());

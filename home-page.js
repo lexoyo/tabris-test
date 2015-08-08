@@ -20,10 +20,10 @@ var buttonRegister = tabris.create('Button', {
 }).appendTo(page);
 
 buttonLogin.on('select', function() {
-    require('./loginPage').open();
+    require('./login-page').open();
 });
 
 buttonRegister.on('select', function() {
-    require('./registerPage').open();
+    require('./register-page').open();
 });
 

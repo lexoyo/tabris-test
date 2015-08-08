@@ -98,5 +98,28 @@ var action = tabris.create("SearchAction", {
 });
 
 
+var drawer = tabris.create("Drawer");
+var button = tabris.create('Button', {
+  id: 'logout',
+  text: 'Déconnexion',
+  layoutData: {left: 10, right: 10, top: 10}
+}).on('select', function() {
+  require('./home-page').open();
+}).appendTo(drawer);
+button = tabris.create('Button', {
+  id: 'profile',
+  text: 'Mon profile',
+  layoutData: {left: 10, right: 10, top: [button, 10]}
+}).on('select', function() {
+  require('./profile-page').open();
+}).appendTo(drawer);
+button = tabris.create('Button', {
+  id: 'about',
+  text: 'A propos de Mink',
+  layoutData: {left: 10, right: 10, top: [button, 10]}
+}).on('select', function() {
+
+}).appendTo(drawer);
+
 
 

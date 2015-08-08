@@ -1,21 +1,39 @@
-var page = tabris.create("Page", {
-  title: "Hello, World!",
-  topLevel: true
-});
+function createPage(name) {
+    var page = null;
+    switch(name) {
+        case 'home':
+            page = tabris.create('Page', {
+                title: 'Mink',
+                topLevel: true
+            });
 
-var button = tabris.create("Button", {
-    text: "Native Widgets",
-    layoutData: {centerX: 0, top: 100}
-}).appendTo(page);
+            tabris.create('ImageView', {
+                image: 'images/bg.jpg',
+                scaleMode: 'fill',
+                layoutData: {left: 0, right: 0, top: 0, bottom: 0}
+            }).appendTo(page);
 
-var label = tabris.create("TextView", {
-    font: "24px",
-    layoutData: {centerX: 0, top: [button, 50]}
-}).appendTo(page);
+            var buttonLogin = tabris.create('Button', {
+                text: 'Me connecter',
+                layoutData: {left: 0, right: '50%', bottom: 0}
+            }).appendTo(page);
 
-button.on("select", function() {
-    label.set("text", "Totally Rock!");
-});
+            var buttonRegister = tabris.create('Button', {
+                text: 'Créer un compte',
+                layoutData: {left: '50%', right: 0, bottom: 0}
+            }).appendTo(page);
 
-page.open();
+            buttonLogin.on('select', function() {
+                createPage('login').open();
+            });
+        break;
+        case 'login':
+            page = tabris.create('Page', {
+                title: 'Login'
+            });
+        break;
+     }
+    return page;
+}
+createPage('home').open();
 

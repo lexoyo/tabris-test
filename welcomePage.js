@@ -71,17 +71,26 @@ var tabs = [];
 tabs[0] = tabris.create("Tab", {
     title: 'Courriers',
 }).appendTo(tabFolder);
-List.decorate(tabs[0], items[0]);
+List.decorate(tabs[0], items[0], function(item) {
+    action.dispose();
+    require('./profilePage').open();
+});
 
 tabs[1] = tabris.create("Tab", {
     title: 'Profiles',
 }).appendTo(tabFolder);
-List.decorate(tabs[1], items[1]);
+List.decorate(tabs[1], items[1], function(item) {
+    action.dispose();
+    require('./profilePage').open();
+});
 
 tabs[2] = tabris.create("Tab", {
     title: 'Offres',
 }).appendTo(tabFolder);
-List.decorate(tabs[2], items[2]);
+List.decorate(tabs[2], items[2], function(item) {
+    action.dispose();
+    require('./profilePage').open();
+});
 
 var action = tabris.create("SearchAction", {
     title: "Search",

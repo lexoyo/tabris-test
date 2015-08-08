@@ -1,5 +1,5 @@
 var List = module.exports = {
-    decorate: function(container, items) {
+    decorate: function(container, items, onClick) {
         tabris.create("CollectionView", {
             layoutData: {left: 0, top: 0, right: 0, bottom: 0},
             items: items,
@@ -15,7 +15,7 @@ var List = module.exports = {
             }
         }).on("select", function(target, value) {
             console.log("selected", value.title);
-            require('./profile').open();
+            onClick(value);
         }).appendTo(container);
     }
 };

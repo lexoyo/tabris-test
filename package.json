@@ -1,0 +1,22 @@
+{
+  "name": "tabris-test",
+  "version": "1.0.0",
+  "description": "This is a test of a [tabris.js](http://tabrisjs.com/) app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lexoyo/tabris-test.git"
+  },
+  "author": "lexoyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexoyo/tabris-test/issues"
+  },
+  "homepage": "https://github.com/lexoyo/tabris-test",
+  "dependencies": {
+    "tabris": "^1.1.0"
+  }
+}
